@@ -1,0 +1,35 @@
+{
+  "name": "reviews-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "demo:domain": "node scripts/run-demo.mjs /scripts/demo-domain.ts",
+    "demo:reviews": "node scripts/run-demo.mjs /scripts/demo-reviews.ts",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "vue": "^3.5.44",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.6",
+    "@types/node": "~22.20.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/tsconfig": "^0.9.1",
+    "npm-run-all2": "^8.0.4",
+    "prettier": "3.9.10",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.5",
+    "vite-plugin-vue-devtools": "^8.2.1",
+    "vue-tsc": "^3.3.13"
+  }
+}
